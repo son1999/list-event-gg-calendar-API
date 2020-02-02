@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Google Calendar API</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-xl-6">
+            <button id="authorize_button" class="btn btn-primary mb-3" style="display: none;">Authorize</button>
+            <button id="signout_button" class="btn btn-danger mb-3" style="display: none;">Sign Out</button>
+            <form class="text-center border border-light p-5" action="#!">
+                <p class="h4 mb-4">Count Event to Google Calendar API</p>
+                <input type="text" id="calendarId" class="form-control mb-4" placeholder="CalendarId...">
+                <input type="text" id="timeMin" class="form-control mb-4" placeholder="Start-Time...">
+                <input type="email" id="timeMax" class="form-control mb-4" placeholder="End-Time...">
+                <button class="btn btn-info btn-block" type="button" onclick="this.onload=function(){};handleClientLoad()">Handle</button>
+            </form>
+        </div>
+        <div class="col-xl-6">
+            <pre id="content" style="white-space: pre-wrap;"></pre>
+            <div id="total-events"></div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="app.js"></script>
+<script async defer src="https://apis.google.com/js/api.js">
+</script>
+</body>
+</html>
